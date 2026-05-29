@@ -39,9 +39,9 @@ def carregar_dados(caminho_csv):
 
 
 st.title("Dashboard de Compras Sem Disputa")
-st.caption("Fonte: dados/compras_sem_disputa(5).csv")
+st.caption("Fonte: dados/compras_sem_disputa(2).csv")
 
-arquivo_padrao = Path(__file__).parent / "dados" / "compras_sem_disputa(5).csv"
+arquivo_padrao = Path(__file__).parent / "dados" / "compras_sem_disputa(2).csv"
 arquivo_personalizado = os.getenv("DASHBOARD_DATASET_PATH")
 caminho = Path(arquivo_personalizado) if arquivo_personalizado else arquivo_padrao
 if not caminho.exists():
