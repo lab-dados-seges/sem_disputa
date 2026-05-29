@@ -96,7 +96,7 @@ resumo_uasg = (
 compras_por_mes = (
     dados.dropna(subset=["DTH_ATUALIZACAO"])
     .set_index("DTH_ATUALIZACAO")
-    .groupby(pd.Grouper(freq="M"))
+    .groupby(pd.Grouper(freq="ME"))
     .agg(valor_total_homologado=("VALOR_TOTAL_HOMOLOGADO", "sum"), quantidade_itens=("QTD_ITEM", "sum"))
     .reset_index()
 )
